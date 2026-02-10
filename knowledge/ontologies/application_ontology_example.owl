@@ -1,0 +1,2817 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#" xml:base="http://www.semanticweb.org/ioc/ontologies/2025/9/execution_configuration_application_ontology"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" ontologyIRI="http://www.semanticweb.org/ioc/ontologies/2025/9/execution_configuration_application_ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/ioc/ontologies/2025/9/execution_configuration_application_ontology#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="beaw" IRI="http://www.semanticweb.org/ioc/ontologies/2025/9/beaware_ontology#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Import>http://www.semanticweb.org/ioc/ontologies/2025/9/beaware_ontology</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Ontology example for the Knowledge-based Execution Configuration for Adaptive Behavior Trees paper</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:Abstract"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:AddKinematicRestriction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:DelayAUntilAfterB"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:Ignore"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:ModulateParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:Physical"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="beaw:ReplaceByParam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Apple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Arm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Banana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bottle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BottleBleach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BottleKetchup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BottleMustard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BottleWater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BottleWine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoundingBox"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bowl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoxCereal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoxChocolatePudding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoxCrackers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoxSugar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Can"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CanBeer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CanCoffee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CanCoke"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CanFanta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CanSpam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CanTomato"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CanTuna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chair"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CheapSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CleaningBottle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CleaningObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Component"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CookingTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Countertop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cupboard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cutlery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DangerousObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dishwasher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrinkBottle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrinkCan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drinkware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodBottle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodBox"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodCan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fork"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FragileObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fridge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fruit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Furniture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GenericPrimitiveClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Glass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeavyObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KitchenAppliance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KitchenPart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kitchenware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Knife"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lemon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lidar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManipulationBehavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManipulationObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Orange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Peach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pitcher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Robot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RobotGripper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RobotHand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoboticComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scrub"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shelf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Skillet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkilletComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkilletHandle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkilletLid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmallObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spatula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sponge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spoon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stove"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Strawberry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Surface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Table"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TableCloth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Teaspoon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WashingMachine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="beaw:FlavorProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="beaw:hasFlavor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="beaw:hasTargetBehavior"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="beaw:hasTargetBehaviorA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="beaw:hasTargetBehaviorB"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ApplicationProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connected"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#different"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasArm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBoundingBox"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLidar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOriginPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTool"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#heldby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#holding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#holding_with_two_hands"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFlavorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#location_can_reach_surface"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#object_on_surface"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#robot_at_location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="beaw:hasNewValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="beaw:hasParamTarget"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="beaw:hasPercentageModifier"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="beaw:hasRole"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="beaw:hasTrigger"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="beaw:obtainsParamValuewithQuery"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="beaw:replacedByParam"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ObjectProperties"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PDDLDataProperties"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PoseProperties"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TestProperties"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#arm_free"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#clear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#closed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCapacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasColor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDeltaX"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDeltaY"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDeltaZ"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMaterial"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOrientationW"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOrientationX"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOrientationY"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOrientationZ"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPositionX"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPositionY"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPositionZ"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isGripperOpen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isObjectOpen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#object_localized"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#placeholderproperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#requires_two_hands"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tesnumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#testBool"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#testNum"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#testStr"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#testprop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_align_to_object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_align_to_surface"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_arrival_procedure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_attempt_grasp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_attempt_grasp_two_arms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_clear_object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_clear_target_area"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_close_gripper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_close_location"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_close_surface"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_determine_grasp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_determine_place_position"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_explore_environment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_fold_arms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_go_home"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_go_to_grasp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_go_to_place"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_go_to_place_position"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_go_to_pregrasp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_go_to_preplace"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_go_to_preungrasp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_go_to_ungrasp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_grasp_object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_grasp_object_two_hands"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_grasp_surface_handle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_is_object_held_tactile"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_is_object_held_visual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_is_target_area_clear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_lift_arm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_lift_object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_lift_object_two_arms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_localize_object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_lower_to_surface"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_move"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_move_arm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_navigate_to_location"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_open_gripper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_open_location"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_open_surface"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_pick"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_pick_object_from_floor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_pick_object_one_hand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_pick_object_two_hands"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_pick_up_two_hands"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_place_down_one_hand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_place_object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_place_object_one_hand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_place_object_two_hands"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_prepare_perception"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_pull_open"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_push_close"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_safety_check_camera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_safety_check_lidar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_select_tool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_select_tools_two_arms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_validate_holding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_validate_placement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bottle_closed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bottle_open"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#can1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#can2heavy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#can_dummy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#coke_can1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dishwasher"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#flavor_1_attempt_grasp_delay_opening_if_gripper_is_a_hand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#flavor_2_attempt_grasp_ignore_go_to_pregrasp_if_object_small"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#flavor_3_pick_if_only_one_tool_dont_select_tool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#flavor_4_manipulating_a_fragile_object_means_reduce_velocity_by_30_pc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#flavor_5_add_kinematic_upright"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glass_cup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#knife1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l_in_front_of_counter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l_in_front_of_cupboard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l_in_front_of_shelf_bot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l_in_front_of_shelf_mid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l_in_front_of_shelf_top"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l_in_front_of_sink"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l_in_front_of_table"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l_in_front_of_under_sink"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_attach_object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_calculate_postgrasp_pose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_calculate_pregrasp_pose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_calculate_target_configuration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_call_execution_configuration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_call_task_planner"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_check_sparql_query"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_close_gripper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_detach_object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_determine_blocking_object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_execute_motion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_fold_arm_left"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_fold_arm_right"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_generic_recovery"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_is_gripper_empty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_is_object_clear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_navigate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_open_gripper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_select_tool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p_validate_location"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#plate_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_counter_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_cupboard_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_cupboard_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_cupboard_c"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_cupboard_d"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_shelf_bottom_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_shelf_mid_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_shelf_top_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_sink_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_table_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_table_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sl_under_sink_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#table1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#table2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teaspoon1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tiago_dual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tiago_dual_arm_left"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tiago_dual_arm_left_pincer_gripper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tiago_dual_arm_left_suction_gripper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tiago_dual_arm_right"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tiago_dual_arm_right_pincer_gripper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tiago_single"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tiago_single_arm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tiago_single_robot_hand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#b_object_clear?"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="beaw:obtainsParamwithQuery"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Apple"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Arm"/>
+        <Class abbreviatedIRI="beaw:Physical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Banana"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bin"/>
+        <Class IRI="#KitchenPart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bottle"/>
+        <Class IRI="#ManipulationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BottleBleach"/>
+        <Class IRI="#CleaningBottle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BottleKetchup"/>
+        <Class IRI="#FoodBottle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BottleMustard"/>
+        <Class IRI="#FoodBottle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BottleWater"/>
+        <Class IRI="#DrinkBottle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BottleWine"/>
+        <Class IRI="#DrinkBottle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoundingBox"/>
+        <Class abbreviatedIRI="beaw:Abstract"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoundingBox"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasOriginPoint"/>
+            <Class IRI="#Point"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoundingBox"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDeltaX"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoundingBox"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDeltaY"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoundingBox"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDeltaZ"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowl"/>
+        <Class IRI="#Kitchenware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoxCereal"/>
+        <Class IRI="#FoodBox"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoxChocolatePudding"/>
+        <Class IRI="#FoodBox"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoxCrackers"/>
+        <Class IRI="#FoodBox"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoxSugar"/>
+        <Class IRI="#FoodBox"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Can"/>
+        <Class IRI="#ManipulationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Can"/>
+        <Class IRI="#SmallObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CanBeer"/>
+        <Class IRI="#DrinkCan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CanCoffee"/>
+        <Class IRI="#FoodCan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CanCoke"/>
+        <Class IRI="#DrinkCan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CanFanta"/>
+        <Class IRI="#DrinkCan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CanSpam"/>
+        <Class IRI="#FoodCan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CanTomato"/>
+        <Class IRI="#FoodCan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CanTuna"/>
+        <Class IRI="#FoodCan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chair"/>
+        <Class IRI="#Furniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CheapSensor"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CleaningBottle"/>
+        <Class IRI="#Bottle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CleaningBottle"/>
+        <Class IRI="#CleaningObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CleaningObject"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CleaningObject"/>
+        <Class IRI="#ManipulationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Component"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CookingTool"/>
+        <Class IRI="#Kitchenware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Countertop"/>
+        <Class IRI="#KitchenPart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cup"/>
+        <Class IRI="#Drinkware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cup"/>
+        <Class IRI="#SmallObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cupboard"/>
+        <Class IRI="#Furniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cutlery"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cutlery"/>
+        <Class IRI="#Kitchenware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DangerousObject"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dishwasher"/>
+        <Class IRI="#KitchenAppliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DrinkBottle"/>
+        <Class IRI="#Bottle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DrinkCan"/>
+        <Class IRI="#Can"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Drinkware"/>
+        <Class IRI="#Kitchenware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodBottle"/>
+        <Class IRI="#Bottle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodBottle"/>
+        <Class IRI="#FoodObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodBottle"/>
+        <Class IRI="#ManipulationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodBox"/>
+        <Class IRI="#FoodObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodBox"/>
+        <Class IRI="#ManipulationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodCan"/>
+        <Class IRI="#Can"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodObject"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fork"/>
+        <Class IRI="#Cutlery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FragileObject"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fridge"/>
+        <Class IRI="#KitchenAppliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fruit"/>
+        <Class IRI="#FoodObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fruit"/>
+        <Class IRI="#ManipulationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Furniture"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GenericPrimitiveClass"/>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glass"/>
+        <Class IRI="#Drinkware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeavyObject"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeavyObject"/>
+        <DataHasValue>
+            <DataProperty IRI="#requires_two_hands"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KitchenAppliance"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KitchenPart"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kitchenware"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kitchenware"/>
+        <Class IRI="#ManipulationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Knife"/>
+        <Class IRI="#Cutlery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Knife"/>
+        <Class IRI="#DangerousObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lemon"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lidar"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <Class abbreviatedIRI="beaw:Physical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManipulationBehavior"/>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManipulationBehavior"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="beaw:hasFlavor"/>
+            <NamedIndividual IRI="#flavor_4_manipulating_a_fragile_object_means_reduce_velocity_by_30_pc"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManipulationObject"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManipulationObject"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#heldby"/>
+                <Class IRI="#Robot"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#in"/>
+                <Class IRI="#Location"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mug"/>
+        <Class IRI="#Drinkware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object2"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Orange"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peach"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pitcher"/>
+        <Class IRI="#Kitchenware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plate"/>
+        <Class IRI="#Kitchenware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plum"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Point"/>
+        <Class abbreviatedIRI="beaw:Abstract"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pose"/>
+        <Class abbreviatedIRI="beaw:Abstract"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pose"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasPositionX"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pose"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasPositionY"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pose"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasPositionZ"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pot"/>
+        <Class IRI="#Kitchenware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Robot"/>
+        <Class abbreviatedIRI="beaw:Physical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RobotGripper"/>
+        <Class IRI="#Tool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RobotHand"/>
+        <Class IRI="#Tool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoboticComponent"/>
+        <Class IRI="#Component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scrub"/>
+        <Class IRI="#CleaningObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor"/>
+        <Class abbreviatedIRI="beaw:Physical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shelf"/>
+        <Class IRI="#Furniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sink"/>
+        <Class IRI="#KitchenAppliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sink"/>
+        <Class IRI="#KitchenPart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Skillet"/>
+        <Class IRI="#CookingTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkilletComponent"/>
+        <Class IRI="#Component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkilletHandle"/>
+        <Class IRI="#SkilletComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkilletLid"/>
+        <Class IRI="#SkilletComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmallObject"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spatula"/>
+        <Class IRI="#CookingTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sponge"/>
+        <Class IRI="#CleaningObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spoon"/>
+        <Class IRI="#Cutlery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stove"/>
+        <Class IRI="#KitchenAppliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Strawberry"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface"/>
+        <Class abbreviatedIRI="beaw:Physical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface"/>
+        <ObjectComplementOf>
+            <Class IRI="#Location"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBoundingBox"/>
+            <Class IRI="#BoundingBox"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#surface_reached_by_location"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Table"/>
+        <Class IRI="#Furniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Table"/>
+        <Class IRI="#Surface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TableCloth"/>
+        <Class IRI="#Kitchenware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Teaspoon"/>
+        <Class IRI="#SmallObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Teaspoon"/>
+        <Class IRI="#Spoon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tool"/>
+        <Class abbreviatedIRI="beaw:Physical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WashingMachine"/>
+        <Class IRI="#KitchenAppliance"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Apple"/>
+        <Class IRI="#Banana"/>
+        <Class IRI="#Lemon"/>
+        <Class IRI="#Orange"/>
+        <Class IRI="#Peach"/>
+        <Class IRI="#Plum"/>
+        <Class IRI="#Strawberry"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Bin"/>
+        <Class IRI="#Countertop"/>
+        <Class IRI="#Sink"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BottleKetchup"/>
+        <Class IRI="#BottleMustard"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BottleWater"/>
+        <Class IRI="#BottleWine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Bowl"/>
+        <Class IRI="#CookingTool"/>
+        <Class IRI="#Cutlery"/>
+        <Class IRI="#Drinkware"/>
+        <Class IRI="#Pitcher"/>
+        <Class IRI="#Plate"/>
+        <Class IRI="#Pot"/>
+        <Class IRI="#TableCloth"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BoxCereal"/>
+        <Class IRI="#BoxChocolatePudding"/>
+        <Class IRI="#BoxCrackers"/>
+        <Class IRI="#BoxSugar"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CanBeer"/>
+        <Class IRI="#CanCoke"/>
+        <Class IRI="#CanFanta"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CanCoffee"/>
+        <Class IRI="#CanSpam"/>
+        <Class IRI="#CanTomato"/>
+        <Class IRI="#CanTuna"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Chair"/>
+        <Class IRI="#Cupboard"/>
+        <Class IRI="#Shelf"/>
+        <Class IRI="#Table"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CleaningBottle"/>
+        <Class IRI="#DrinkBottle"/>
+        <Class IRI="#FoodBottle"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CleaningBottle"/>
+        <Class IRI="#Scrub"/>
+        <Class IRI="#Sponge"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cup"/>
+        <Class IRI="#Glass"/>
+        <Class IRI="#Mug"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Dishwasher"/>
+        <Class IRI="#Fridge"/>
+        <Class IRI="#Sink"/>
+        <Class IRI="#Stove"/>
+        <Class IRI="#WashingMachine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DrinkCan"/>
+        <Class IRI="#FoodCan"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FoodBottle"/>
+        <Class IRI="#FoodBox"/>
+        <Class IRI="#Fruit"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Furniture"/>
+        <Class IRI="#KitchenPart"/>
+        <Class IRI="#ManipulationObject"/>
+        <Class IRI="#Robot"/>
+        <Class IRI="#RoboticComponent"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#RoboticComponent"/>
+        <Class IRI="#SkilletComponent"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Skillet"/>
+        <Class IRI="#Spatula"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SkilletHandle"/>
+        <Class IRI="#SkilletLid"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_align_to_object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_align_to_surface"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_arrival_procedure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_attempt_grasp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_attempt_grasp_two_arms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_clear_object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_clear_target_area"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_close_gripper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_close_location"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_close_surface"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_determine_grasp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_determine_place_position"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_explore_environment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_fold_arms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_go_home"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_go_to_grasp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_go_to_place"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_go_to_place_position"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_go_to_pregrasp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_go_to_preplace"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_go_to_preungrasp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_go_to_ungrasp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_grasp_object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_grasp_object_two_hands"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_grasp_surface_handle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_is_object_held_tactile"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_is_object_held_visual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_is_target_area_clear"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_lift_arm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_lift_object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_lift_object_two_arms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_localize_object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_lower_to_surface"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_move"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_move_arm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_navigate_to_location"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_open_gripper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_open_location"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_open_surface"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_pick"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManipulationBehavior"/>
+        <NamedIndividual IRI="#b_pick"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_pick_object_from_floor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_pick_object_one_hand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManipulationBehavior"/>
+        <NamedIndividual IRI="#b_pick_object_one_hand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_pick_object_two_hands"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_pick_up_two_hands"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_place_down_one_hand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_place_object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_place_object_one_hand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_place_object_two_hands"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_prepare_perception"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_pull_open"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_push_close"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_safety_check_camera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_safety_check_lidar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_select_tool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_select_tools_two_arms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_validate_holding"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_validate_placement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bottle"/>
+        <NamedIndividual IRI="#bottle_closed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bottle"/>
+        <NamedIndividual IRI="#bottle_open"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Can"/>
+        <NamedIndividual IRI="#can1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Can"/>
+        <NamedIndividual IRI="#can2heavy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HeavyObject"/>
+        <NamedIndividual IRI="#can2heavy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Can"/>
+        <NamedIndividual IRI="#can_dummy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CanCoke"/>
+        <NamedIndividual IRI="#coke_can1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dishwasher"/>
+        <NamedIndividual IRI="#dishwasher"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:DelayAUntilAfterB"/>
+        <NamedIndividual IRI="#flavor_1_attempt_grasp_delay_opening_if_gripper_is_a_hand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Ignore"/>
+        <NamedIndividual IRI="#flavor_2_attempt_grasp_ignore_go_to_pregrasp_if_object_small"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:ReplaceByParam"/>
+        <NamedIndividual IRI="#flavor_3_pick_if_only_one_tool_dont_select_tool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:ModulateParameter"/>
+        <NamedIndividual IRI="#flavor_4_manipulating_a_fragile_object_means_reduce_velocity_by_30_pc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:AddKinematicRestriction"/>
+        <NamedIndividual IRI="#flavor_5_add_kinematic_upright"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cup"/>
+        <NamedIndividual IRI="#glass_cup"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Knife"/>
+        <NamedIndividual IRI="#knife1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Countertop"/>
+        <NamedIndividual IRI="#l_in_front_of_counter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#l_in_front_of_counter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cupboard"/>
+        <NamedIndividual IRI="#l_in_front_of_cupboard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#l_in_front_of_cupboard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_bot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_mid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_mid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_top"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_top"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#l_in_front_of_sink"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sink"/>
+        <NamedIndividual IRI="#l_in_front_of_sink"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#l_in_front_of_table"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#l_in_front_of_under_sink"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_attach_object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_calculate_postgrasp_pose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_calculate_pregrasp_pose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_calculate_target_configuration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_call_execution_configuration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_call_task_planner"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_check_sparql_query"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_close_gripper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_detach_object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_determine_blocking_object"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_execute_motion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_fold_arm_left"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_fold_arm_right"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_generic_recovery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_is_gripper_empty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_is_object_clear"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_navigate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_open_gripper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_select_tool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Primitive"/>
+        <NamedIndividual IRI="#p_validate_location"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ManipulationObject"/>
+        <NamedIndividual IRI="#plate_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Plate"/>
+        <NamedIndividual IRI="#plate_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_counter_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_cupboard_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_cupboard_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_cupboard_c"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_cupboard_d"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_shelf_bottom_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_shelf_mid_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_shelf_top_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_sink_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_table_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_table_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#sl_under_sink_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Table"/>
+        <NamedIndividual IRI="#table1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Table"/>
+        <NamedIndividual IRI="#table2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Teaspoon"/>
+        <NamedIndividual IRI="#teaspoon1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Robot"/>
+        <NamedIndividual IRI="#tiago_dual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Arm"/>
+        <NamedIndividual IRI="#tiago_dual_arm_left"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RobotGripper"/>
+        <NamedIndividual IRI="#tiago_dual_arm_left_pincer_gripper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RobotGripper"/>
+        <NamedIndividual IRI="#tiago_dual_arm_left_suction_gripper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Arm"/>
+        <NamedIndividual IRI="#tiago_dual_arm_right"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RobotGripper"/>
+        <NamedIndividual IRI="#tiago_dual_arm_right_pincer_gripper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Robot"/>
+        <NamedIndividual IRI="#tiago_single"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Arm"/>
+        <NamedIndividual IRI="#tiago_single_arm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RobotHand"/>
+        <NamedIndividual IRI="#tiago_single_robot_hand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="beaw:Behavior"/>
+        <NamedIndividual IRI="#b_object_clear?"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#can1"/>
+        <NamedIndividual IRI="#can2heavy"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#dishwasher"/>
+        <NamedIndividual IRI="#table1"/>
+        <NamedIndividual IRI="#table2"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="beaw:hasFlavor"/>
+        <NamedIndividual IRI="#b_attempt_grasp"/>
+        <NamedIndividual IRI="#flavor_1_attempt_grasp_delay_opening_if_gripper_is_a_hand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="beaw:hasFlavor"/>
+        <NamedIndividual IRI="#b_pick_object_one_hand"/>
+        <NamedIndividual IRI="#flavor_3_pick_if_only_one_tool_dont_select_tool"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="beaw:hasTargetBehaviorA"/>
+        <NamedIndividual IRI="#flavor_1_attempt_grasp_delay_opening_if_gripper_is_a_hand"/>
+        <NamedIndividual IRI="#b_open_gripper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="beaw:hasTargetBehaviorB"/>
+        <NamedIndividual IRI="#flavor_1_attempt_grasp_delay_opening_if_gripper_is_a_hand"/>
+        <NamedIndividual IRI="#b_go_to_pregrasp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="beaw:hasTargetBehavior"/>
+        <NamedIndividual IRI="#flavor_2_attempt_grasp_ignore_go_to_pregrasp_if_object_small"/>
+        <NamedIndividual IRI="#b_go_to_pregrasp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFlavorOf"/>
+        <NamedIndividual IRI="#flavor_2_attempt_grasp_ignore_go_to_pregrasp_if_object_small"/>
+        <NamedIndividual IRI="#b_attempt_grasp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="beaw:hasTargetBehavior"/>
+        <NamedIndividual IRI="#flavor_3_pick_if_only_one_tool_dont_select_tool"/>
+        <NamedIndividual IRI="#b_select_tool"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFlavorOf"/>
+        <NamedIndividual IRI="#flavor_5_add_kinematic_upright"/>
+        <NamedIndividual IRI="#b_lift_object"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFlavorOf"/>
+        <NamedIndividual IRI="#flavor_5_add_kinematic_upright"/>
+        <NamedIndividual IRI="#b_lift_object_two_arms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#connected"/>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+        <NamedIndividual IRI="#l_in_front_of_counter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#connected"/>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+        <NamedIndividual IRI="#l_in_front_of_cupboard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#connected"/>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_bot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#connected"/>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_mid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#connected"/>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_top"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#connected"/>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+        <NamedIndividual IRI="#l_in_front_of_sink"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#connected"/>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+        <NamedIndividual IRI="#l_in_front_of_table"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#connected"/>
+        <NamedIndividual IRI="#l_center_kitchen"/>
+        <NamedIndividual IRI="#l_in_front_of_under_sink"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_counter_a"/>
+        <NamedIndividual IRI="#l_in_front_of_counter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_cupboard_a"/>
+        <NamedIndividual IRI="#l_in_front_of_cupboard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_cupboard_b"/>
+        <NamedIndividual IRI="#l_in_front_of_cupboard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_cupboard_c"/>
+        <NamedIndividual IRI="#l_in_front_of_cupboard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_cupboard_d"/>
+        <NamedIndividual IRI="#l_in_front_of_cupboard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_shelf_bottom_a"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_bot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_shelf_mid_a"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_mid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_shelf_top_a"/>
+        <NamedIndividual IRI="#l_in_front_of_shelf_top"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_sink_a"/>
+        <NamedIndividual IRI="#l_in_front_of_sink"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_table_a"/>
+        <NamedIndividual IRI="#l_in_front_of_table"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_table_b"/>
+        <NamedIndividual IRI="#l_in_front_of_table"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <NamedIndividual IRI="#sl_under_sink_a"/>
+        <NamedIndividual IRI="#l_in_front_of_under_sink"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArm"/>
+        <NamedIndividual IRI="#tiago_dual"/>
+        <NamedIndividual IRI="#tiago_dual_arm_left"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArm"/>
+        <NamedIndividual IRI="#tiago_dual"/>
+        <NamedIndividual IRI="#tiago_dual_arm_right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTool"/>
+        <NamedIndividual IRI="#tiago_dual_arm_left"/>
+        <NamedIndividual IRI="#tiago_dual_arm_left_pincer_gripper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTool"/>
+        <NamedIndividual IRI="#tiago_dual_arm_left"/>
+        <NamedIndividual IRI="#tiago_dual_arm_left_suction_gripper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTool"/>
+        <NamedIndividual IRI="#tiago_dual_arm_right"/>
+        <NamedIndividual IRI="#tiago_dual_arm_right_pincer_gripper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasArm"/>
+        <NamedIndividual IRI="#tiago_single"/>
+        <NamedIndividual IRI="#tiago_single_arm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTool"/>
+        <NamedIndividual IRI="#tiago_single_arm"/>
+        <NamedIndividual IRI="#tiago_single_robot_hand"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isObjectOpen"/>
+        <NamedIndividual IRI="#bottle_closed"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isObjectOpen"/>
+        <NamedIndividual IRI="#bottle_open"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPositionX"/>
+        <NamedIndividual IRI="#can_dummy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">-20.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:hasRole"/>
+        <NamedIndividual IRI="#coke_can1"/>
+        <Literal>bomb</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#clear"/>
+        <NamedIndividual IRI="#dishwasher"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#closed"/>
+        <NamedIndividual IRI="#dishwasher"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:hasTrigger"/>
+        <NamedIndividual IRI="#flavor_1_attempt_grasp_delay_opening_if_gripper_is_a_hand"/>
+        <Literal>ASK#sWHERE#s{#n#s#s&lt;arm&gt;#sonto:hasTool#s?tool#s.#n#s#s?tool#srdf:type/rdfs:subClassOf*#sonto:RobotHand#s.#n}#n</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:hasTrigger"/>
+        <NamedIndividual IRI="#flavor_2_attempt_grasp_ignore_go_to_pregrasp_if_object_small"/>
+        <Literal>ASK#s{#s&lt;manipobject&gt;#srdf:type/rdfs:subClassOf*#sonto:SmallObject#n}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:hasTrigger"/>
+        <NamedIndividual IRI="#flavor_3_pick_if_only_one_tool_dont_select_tool"/>
+        <Literal>ASK#sWHERE#s{#n#s#s&lt;arm&gt;#sonto:hasTool#s?tool#s.#n#s#sFILTER#sNOT#sEXISTS#s{#n#s#s#s#s&lt;arm&gt;#sonto:hasTool#s?otherTool#s.#n#s#s#s#sFILTER#s(?otherTool#s!=#s?tool)#n#s#s}#n}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:obtainsParamValuewithQuery"/>
+        <NamedIndividual IRI="#flavor_3_pick_if_only_one_tool_dont_select_tool"/>
+        <Literal>SELECT DISTINCT ?tool WHERE {#n&lt;arm&gt; onto:hasTool ?tool .}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:replacedByParam"/>
+        <NamedIndividual IRI="#flavor_3_pick_if_only_one_tool_dont_select_tool"/>
+        <Literal>selected_tool</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:hasParamTarget"/>
+        <NamedIndividual IRI="#flavor_4_manipulating_a_fragile_object_means_reduce_velocity_by_30_pc"/>
+        <Literal>velocity</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:hasPercentageModifier"/>
+        <NamedIndividual IRI="#flavor_4_manipulating_a_fragile_object_means_reduce_velocity_by_30_pc"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">-30.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:hasTrigger"/>
+        <NamedIndividual IRI="#flavor_4_manipulating_a_fragile_object_means_reduce_velocity_by_30_pc"/>
+        <Literal>ASK#s{#s&lt;manipobject&gt;#srdf:type/rdfs:subClassOf*#sonto:FragileObject#n }</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:hasNewValue"/>
+        <NamedIndividual IRI="#flavor_5_add_kinematic_upright"/>
+        <Literal>upright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="beaw:hasTrigger"/>
+        <NamedIndividual IRI="#flavor_5_add_kinematic_upright"/>
+        <Literal>ASK#sWHERE#s{#n#s#s&lt;manipobject&gt;#sonto:isObjectOpen#strue#n}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaterial"/>
+        <NamedIndividual IRI="#glass_cup"/>
+        <Literal>glass</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isObjectOpen"/>
+        <NamedIndividual IRI="#glass_cup"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#connected"/>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#different"/>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasArm"/>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBoundingBox"/>
+        <ObjectProperty IRI="#ApplicationProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLidar"/>
+        <ObjectProperty IRI="#ApplicationProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOriginPoint"/>
+        <ObjectProperty IRI="#ApplicationProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTool"/>
+        <ObjectProperty IRI="#ApplicationProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#heldby"/>
+        <ObjectProperty IRI="#ApplicationProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#holding"/>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#holding_with_two_hands"/>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#in"/>
+        <ObjectProperty IRI="#ApplicationProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isFlavorOf"/>
+        <ObjectProperty abbreviatedIRI="beaw:FlavorProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#location_can_reach_surface"/>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#object_on_surface"/>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#robot_at_location"/>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <ObjectProperty IRI="#PDDLProperties"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="beaw:hasFlavor"/>
+        <ObjectProperty IRI="#isFlavorOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#heldby"/>
+        <ObjectProperty IRI="#holding"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#location_can_reach_surface"/>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasOriginPoint"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#in"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#connected"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#connected"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTool"/>
+        <ObjectUnionOf>
+            <Class IRI="#Arm"/>
+            <Class IRI="#Robot"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#holding"/>
+        <Class IRI="#Robot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#holding_with_two_hands"/>
+        <Class IRI="#Robot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#object_on_surface"/>
+        <Class IRI="#ManipulationObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#robot_at_location"/>
+        <Class IRI="#Robot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <Class IRI="#Surface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#connected"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBoundingBox"/>
+        <Class IRI="#BoundingBox"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOriginPoint"/>
+        <Class IRI="#Point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTool"/>
+        <Class IRI="#Tool"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#holding"/>
+        <Class IRI="#ManipulationObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#holding_with_two_hands"/>
+        <Class IRI="#ManipulationObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#object_on_surface"/>
+        <Class IRI="#Surface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#robot_at_location"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#surface_reached_by_location"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#arm_free"/>
+        <DataProperty IRI="#PDDLDataProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#clear"/>
+        <DataProperty IRI="#PDDLDataProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#closed"/>
+        <DataProperty IRI="#PDDLDataProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCapacity"/>
+        <DataProperty IRI="#ObjectProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasColor"/>
+        <DataProperty IRI="#ObjectProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasDeltaX"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasDeltaY"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasDeltaZ"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMaterial"/>
+        <DataProperty IRI="#ObjectProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOrientationW"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOrientationX"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOrientationY"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOrientationZ"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPositionX"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPositionY"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPositionZ"/>
+        <DataProperty IRI="#PoseProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSize"/>
+        <DataProperty IRI="#ObjectProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#object_localized"/>
+        <DataProperty IRI="#PDDLDataProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#requires_two_hands"/>
+        <DataProperty IRI="#PDDLDataProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#tesnumber"/>
+        <DataProperty IRI="#TestProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#testBool"/>
+        <DataProperty IRI="#TestProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#testNum"/>
+        <DataProperty IRI="#TestProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#testStr"/>
+        <DataProperty IRI="#TestProperties"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#testprop"/>
+        <DataProperty IRI="#TestProperties"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#clear"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDeltaX"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDeltaY"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDeltaZ"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasOrientationW"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasOrientationX"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasOrientationY"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasOrientationZ"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasPositionX"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasPositionY"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasPositionZ"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#isGripperOpen"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#isObjectOpen"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#placeholderproperty"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#testNum"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ObjectProperties"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#clear"/>
+        <ObjectUnionOf>
+            <Class IRI="#Location"/>
+            <Class IRI="#Surface"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasColor"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMaterial"/>
+        <Class abbreviatedIRI="beaw:Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isGripperOpen"/>
+        <Class IRI="#RobotGripper"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#object_localized"/>
+        <Class IRI="#ManipulationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#arm_free"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#clear"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#closed"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCapacity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMaterial"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSize"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isGripperOpen"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isObjectOpen"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#object_localized"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#requires_two_hands"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tesnumber"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#testBool"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#testNum"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#testStr"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#testprop"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#ManipulationBehavior"/>
+                <Variable IRI="urn:swrl:var#b"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="beaw:hasFlavor"/>
+                <Variable IRI="urn:swrl:var#b"/>
+                <NamedIndividual IRI="#flavor_4_manipulating_a_fragile_object_means_reduce_velocity_by_30_pc"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>if an object is in something, its not clear</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#in"/>
+                <Variable IRI="urn:swrl:var#obj"/>
+                <Variable IRI="urn:swrl:var#from"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#clear"/>
+                <Variable IRI="urn:swrl:var#from"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Objects made of glass are fragile</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasMaterial"/>
+                <Variable IRI="urn:swrl:var#x"/>
+                <Literal>glass</Literal>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#FragileObject"/>
+                <Variable IRI="urn:swrl:var#x"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ApplicationProperties</IRI>
+        <Literal>properties for the application itself</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GenericPrimitiveClass</IRI>
+        <Literal>placeholder primitive subclass justfor testing purposes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Object2</IRI>
+        <Literal>Test class, ignore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Surface</IRI>
+        <Literal>sublocations are individual parts of a location, that can be occupied by ONLY one item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#flavor_3_pick_if_only_one_tool_dont_select_tool</IRI>
+        <Literal>Replace Select Tool by setting the parameter if only one tool is available</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#flavor_3_pick_if_only_one_tool_dont_select_tool</IRI>
+        <Literal>old trigger: ASK#sWHERE#s{#n#s#s{#n#s#s#s#sSELECT#sDISTINCT#s(COUNT(?tool)#sAS#s?numTools)#n#s#s#s#sWHERE#s{#n#s#s#s#s#s#s&lt;arm&gt;#sonto:hasTool#s?tool#s.#n#s#s#s#s}#n#s#s}#n#s#sFILTER(?numTools#s=#s1)#n}</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->

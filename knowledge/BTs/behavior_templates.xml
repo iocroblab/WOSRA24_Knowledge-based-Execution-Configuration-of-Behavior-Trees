@@ -1,0 +1,566 @@
+<?xml version="1.0" ?>
+<root main_tree_to_execute="Pick Object One Hand">
+
+    <BehaviorTree ID="Navigate To Location">
+
+        <Sequence>
+
+            <Sequence name="Setup Parameters">
+
+                <Script code="velocity:={V}"/>
+
+            </Sequence>
+
+            <Sequence>
+
+                <Action ID="Validate Location" location="#s:to"/>
+
+                <SubTree ID="Departure Procedure" robot="#s:robot" location="#s:from"/>
+
+                <Action ID="CalculatePath" robot="#s:robot" from_location="#s:from" target_location="#s:to" path="{path}"/>
+
+                <Action ID="Navigate" robot="#s:robot" target_location="#s:to" velocity="{velocity}" path="{path}"/>
+
+                <SubTree ID="Arrival Procedure" robot="#s:robot" location="#s:to"/>
+
+            </Sequence>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Localize Object">
+
+        <Sequence>
+
+            <Sequence name="Setup Parameters">
+
+                <Script code="scan_range:=2.0"/>
+
+            </Sequence>
+
+            <Sequence>
+
+                <SubTree ID="Prepare Perception" robot="#s:robot"/>
+
+                <SubTree ID="Explore Environment" robot="#s:robot"/>
+
+                <Action ID="ScanForObject" object="#s:manipobject" object_pose="{object_pose}"/>
+
+            </Sequence>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Pick Object One Hand">
+
+        <Sequence>
+
+
+
+            <Script code="velocity:=10"/>
+
+
+            <SubTree ID="Select Tool" robot="#s:robot" arm="#s:arm" object="#s:manipobject" selected_tool="{selected_tool}"/>
+
+            <SubTree ID="Attempt Grasp" robot="#s:robot" arm="#s:arm" object="#s:manipobject" velocity="{velocity}" selected_tool="{selected_tool}" pregrasp_position="{pregrasp_position}"/>
+
+            <SubTree ID="Lift Object" robot="#s:robot" arm="#s:arm" object="#s:manipobject" velocity="{velocity}"/>
+
+        </Sequence>
+
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Pick Object Two Hands">
+
+        <Sequence>
+
+            <Sequence name="Setup Parameters">
+
+                <Script code="velocity:={V}"/>
+
+            </Sequence>
+
+            <SubTree ID="Select Tools Two Arms" robot="#s:robot" arm1="#s:arm1" arm2="#s:arm2" object="#s:manipobject" selected_tool1="{selected_tool1}" selected_tool2="{selected_tool2}"/>
+
+            <SubTree ID="Attempt Grasp Two Arms" robot="#s:robot" arm1="#s:arm1" arm2="#s:arm2" object="#s:manipobject" velocity="{velocity}" selected_tool1="{selected_tool1}" selected_tool2="{selected_tool2}" pregrasp_position1="{pregrasp_position1}" pregrasp_position2="{pregrasp_position2}"/>
+
+            <SubTree ID="Lift Object Two Arms" robot="#s:robot" arm1="#s:arm1" arm2="#s:arm2" object="#s:manipobject" velocity="{velocity}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Place Object One Hand">
+
+        <Sequence>
+
+            <Sequence name="Setup Parameters">
+
+                <Script code="velocity:=0.3"/>
+
+            </Sequence>
+
+            <Sequence name="Place Execution Sequence">
+
+                <SubTree ID="Determine Place Position" robot="#s:robot" object="#s:manipobject" surface="#s:surface" place_position="{place_position}"/>
+
+                <SubTree ID="Go To Place Position" robot="#s:robot" arm="#s:arm" object="#s:manipobject" velocity="{velocity}" target_position="{place_position}" pose_valid="{pose_valid}"/>
+
+                <SubTree ID="Align To Surface" robot="#s:robot" surface="#s:surface" arm="#s:arm"/>
+
+                <SubTree ID="Lower To Surface" robot="#s:robot" surface="#s:surface" arm="#s:arm" lowered_status="{lowered_status}"/>
+
+                <SubTree ID="Open Gripper" selected_tool="{selected_tool}"/>
+
+                <SubTree ID="Validate Placement" robot="#s:robot" arm="#s:arm" object="#s:manipobject" surface="#s:surface"/>
+
+            </Sequence>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Place Object Two Hands">
+
+        <Sequence>
+
+            <SubTree ID="Align To Surface" robot="#s:robot" surface="#s:surface" arm="#s:arm1"/>
+
+            <SubTree ID="Align To Surface" robot="#s:robot" surface="#s:surface" arm="#s:arm2"/>
+
+            <Action ID="Release" robot="#s:robot" arm="#s:arm1" object="#s:manipobject"/>
+
+            <Action ID="Release" robot="#s:robot" arm="#s:arm2" object="#s:manipobject"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Open Surface">
+
+        <Sequence>
+
+            <Sequence name="Setup Parameters">
+
+                <Script code="velocity:={V}"/>
+
+            </Sequence>
+
+            <Sequence name="Open Surface Execution Sequence">
+
+                <Action ID="IdentifyHandle" surface="#s:surface" handle="{handle}"/>
+
+                <SubTree ID="Select Tool" robot="#s:robot" arm="#s:arm" object="{handle}" selected_tool="{selected_tool}"/>
+
+                <SubTree ID="Attempt Grasp" robot="#s:robot" object="{handle}" arm="#s:arm" velocity="{velocity}" selected_tool="{selected_tool}" pregrasp_position="{pregrasp_position_unused}"/>
+
+                <SubTree ID="Pull Open" robot="#s:robot" handle="{handle}" surface="#s:surface" arm="#s:arm"/>
+
+            </Sequence>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Close Surface">
+
+        <Sequence>
+
+            <Sequence name="Setup Parameters">
+
+                <Script code="velocity:={V}"/>
+
+            </Sequence>
+
+            <Sequence name="Open Surface Execution Sequence">
+
+                <Action ID="IdentifyHandle" surface="#s:surface" handle="{handle}"/>
+
+                <SubTree ID="Select Tool" robot="#s:robot" arm="#s:arm" object="{handle}" selected_tool="{selected_tool}"/>
+
+                <SubTree ID="Attempt Grasp" robot="#s:robot" object="{handle}" arm="#s:arm" velocity="{velocity}" selected_tool="{selected_tool}" pregrasp_position="{pregrasp_position_unused}"/>
+
+                <SubTree ID="Push Close" robot="#s:robot" handle="{handle}" surface="#s:surface" arm="#s:arm"/>
+
+            </Sequence>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Align To Object" _inputs="robot;object;arm">
+
+        <Action ID="Align" robot="{robot}" object="{object}" arm="{arm}"/>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Attempt Grasp" _inputs="robot;arm;object;velocity;selected_tool" _outputs="robot;arm;object;velocity;selected_tool;pregrasp_position">
+
+        <Sequence>
+
+            <SubTree ID="Open Gripper" selected_tool="{selected_tool}"/>
+
+            <SubTree ID="Determine Grasp" selected_tool="{selected_tool}" robot="{robot}" arm="{arm}" object="{object}" selected_grasp_position="{selected_grasp_position}" selected_pregrasp_position="{selected_pregrasp_position}"/>
+
+            <SubTree ID="Go To Pregrasp" robot="{robot}" arm="{arm}" object="{object}" velocity="{velocity}" target_position="{selected_pregrasp_position}"/>
+
+            <SubTree ID="Go To Grasp" robot="{robot}" arm="{arm}" object="{object}" velocity="{velocity}" target_position="{selected_grasp_position}"/>
+
+
+
+            <SubTree ID="Grasp Object" selected_tool="{selected_tool}" object="{object}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Open Gripper" _inputs="selected_tool" _outputs="selected_tool">
+
+        <Sequence>
+            <Action ID="Gripper Empty?"></Action>
+
+            <Action ID="Open Gripper" gripper="{selected_tool}" position="open"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Close Gripper" _inputs="selected_tool" _outputs="selected_tool">
+
+        <Action ID="Close Gripper" gripper="{selected_tool}" position="close"/>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Select Tool" _inputs="robot;arm;object;selected_tool" _outputs="robot;arm;object;selected_tool">
+
+        <Sequence>
+            <Action ID="Select Tool" robot="{robot}" arm="{arm}" object="{object}" selected_tool="{selected_tool}"/>
+            <Action ID="Tool Status?" tool="{selected_tool}"/>
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Determine Grasp" _inputs="selected_tool;robot;arm;object" _outputs="selected_grasp_position;selected_pregrasp_position">
+
+        <Sequence>
+
+            <Action ID="Localize Object" object="{object}" object_pose="{object_pose}"/>
+
+            <Action ID="Scan For Obstacles" object="{object}" found_obstacles="{found_obstacles}"/>
+
+            <Action ID="Determine Grasp" selected_tool="{selected_tool}" robot="{robot}" arm="{arm}" object="{object}" obstacles_in_scene="{found_obstacles}" selected_grasp_position="{selected_grasp_position}" selected_pregrasp_position="{selected_pregrasp_position}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Go To Pregrasp" _inputs="robot;arm;object;velocity;target_position" _outputs="robot;arm;object;velocity;target_position">
+
+        <Sequence>
+
+            <Action ID="Move Arm To Pregrasp" robot="{robot}" arm="{arm}" target="{target_position}" velocity="{velocity}"/>
+            <Action ID="Align To Object" robot="{robot}" object="{object}" arm="{arm}"/>
+
+            <Action ID="Is Gripper Aligned?" robot="{robot}" object="{object}" arm="{arm}" target_position="{target_position}" validation_status="{pose_valid}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Go To Grasp" _inputs="robot;arm;object;velocity;target_position" _outputs="robot;arm;object;velocity;target_position">
+
+        <Sequence>
+
+            <Action ID="Approach Object" robot="{robot}" arm="{arm}" object="{object}" target_position="{target_position}" velocity="{velocity}"/>
+
+
+            <Action ID="Is Grasp Pose valid?" robot="{robot}" object="{object}" arm="{arm}" target_position="{target_position}" validation_status="{grasp_pose_valid}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Lift Object" _inputs="robot;arm;object;velocity" _outputs="robot;arm;object;velocity">
+
+        <Sequence>
+
+            <Action ID="Compute Lift Trajectory" robot="{robot}" object="{object}" arm="{arm}" lift_height="0.15" velocity="{velocity}" lift_trajectory="{trajectory}"/>
+
+            <Action ID="Execute Trajectory" robot="{robot}" arm="{arm}" trajectory="{trajectory}"/>
+
+            <Action ID="Confirm Position?" robot="{robot}" arm="{arm}" object="{object}" lifted_status="{lifted_success}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Align To Surface" _inputs="robot;surface;arm" _outputs="robot;surface;arm">
+
+        <Sequence>
+
+            <Action ID="ScanSurface" robot="{robot}" surface="{surface}" surface_pose="{surface_pose}"/>
+
+            <Action ID="AdjustPoseForPlacement" robot="{robot}" arm="{arm}" surface_pose="{surface_pose}"/>
+
+            <Action ID="ConfirmAlignment" robot="{robot}" arm="{arm}" surface="{surface}" alignment_success="{alignment_status}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Grasp Object" _inputs="selected_tool;object" _outputs="selected_tool;object">
+
+        <Sequence>
+
+            <Action ID="Close Gripper"></Action>
+            <Action ID="Validate Holding?" selected_tool="{selected_tool}" object="{object}"></Action>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Validate Holding" _inputs="selected_tool;object" _outputs="selected_tool;object">
+
+        <Sequence>
+
+            <Action ID="CheckGripForce" gripper="{selected_tool}" object="{object}" grip_status="{grip_valid}"/>
+
+            <Action ID="CheckObjectPoseStability" object="{object}" stability_status="{object_stable}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Select Tools Two Arms" _inputs="robot;arm1;arm2;object" _outputs="selected_tool1;selected_tool2">
+
+        <Sequence>
+
+            <SubTree ID="Select Tool" robot="{robot}" arm="{arm1}" object="{object}" selected_tool="{selected_tool1}"/>
+
+            <SubTree ID="Select Tool" robot="{robot}" arm="{arm2}" object="{object}" selected_tool="{selected_tool2}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Attempt Grasp Two Arms" _inputs="robot;arm1;arm2;object;velocity;selected_tool1;selected_tool2" _outputs="pregrasp_position1;pregrasp_position2">
+
+        <Sequence>
+
+            <Parallel success_threshold="2">
+
+                <SubTree ID="Open Gripper" selected_tool="{selected_tool1}"/>
+
+                <SubTree ID="Open Gripper" selected_tool="{selected_tool2}"/>
+
+            </Parallel>
+
+            <Parallel success_threshold="2">
+
+                <SubTree ID="Determine Grasp" selected_tool="{selected_tool1}" robot="{robot}" arm="{arm1}" object="{object}" selected_grasp_position="{grasp_position1}" selected_pregrasp_position="{pregrasp_position1}"/>
+
+                <SubTree ID="Determine Grasp" selected_tool="{selected_tool2}" robot="{robot}" arm="{arm2}" object="{object}" selected_grasp_position="{grasp_position2}" selected_pregrasp_position="{pregrasp_position2}"/>
+
+            </Parallel>
+
+            <Parallel success_threshold="2">
+
+                <SubTree ID="Go To Pregrasp" robot="{robot}" arm="{arm1}" object="{object}" velocity="{velocity}" target_position="{pregrasp_position1}"/>
+
+                <SubTree ID="Go To Pregrasp" robot="{robot}" arm="{arm2}" object="{object}" velocity="{velocity}" target_position="{pregrasp_position2}"/>
+
+            </Parallel>
+
+            <Parallel success_threshold="2">
+
+                <SubTree ID="Go To Grasp" robot="{robot}" arm="{arm1}" object="{object}" velocity="{velocity}" target_position="{grasp_position1}"/>
+
+                <SubTree ID="Go To Grasp" robot="{robot}" arm="{arm2}" object="{object}" velocity="{velocity}" target_position="{grasp_position2}"/>
+
+            </Parallel>
+
+            <Parallel success_threshold="2">
+
+                <SubTree ID="Close Gripper" selected_tool="{selected_tool1}"/>
+
+                <SubTree ID="Close Gripper" selected_tool="{selected_tool2}"/>
+
+            </Parallel>
+
+            <Parallel success_threshold="2">
+
+                <SubTree ID="Validate Holding" selected_tool="{selected_tool1}" object="{object}"/>
+
+                <SubTree ID="Validate Holding" selected_tool="{selected_tool2}" object="{object}"/>
+
+            </Parallel>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Lift Object Two Arms" _inputs="robot;arm1;arm2;object;velocity">
+
+        <Sequence>
+
+            <SubTree ID="Lift Object" robot="{robot}" arm="{arm1}" object="{object}" velocity="{velocity}"/>
+
+            <SubTree ID="Lift Object" robot="{robot}" arm="{arm2}" object="{object}" velocity="{velocity}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Determine Place Position" _inputs="robot;object;surface" _outputs="place_position">
+
+        <Sequence>
+
+            <Action ID="ValidateSurface" robot="{robot}" surface="{surface}"/>
+
+            <Action ID="ScanSurfaceArea" robot="{robot}" surface="{surface}" area_map="{surface_map}"/>
+
+            <Action ID="CalculatePlacePose" object="{object}" surface_map="{surface_map}" place_position="{place_position}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Go To Place Position" _inputs="robot;arm;object;velocity;target_position" _outputs="pose_valid">
+
+        <Sequence>
+
+            <Action ID="NavigateArmToPosition" robot="{robot}" arm="{arm}" target="{target_position}" velocity="{velocity}"/>
+
+            <Action ID="ValidatePose" robot="{robot}" object="{object}" arm="{arm}" target_position="{target_position}" validation_status="{pose_valid}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Lower To Surface" _inputs="robot;arm;surface" _outputs="lowered_status">
+
+        <Sequence>
+
+            <Action ID="ComputeLowerTrajectory" robot="{robot}" arm="{arm}" surface="{surface}" clearance="0.02" trajectory="{lower_trajectory}"/>
+
+            <Action ID="ExecuteTrajectory" robot="{robot}" arm="{arm}" trajectory="{lower_trajectory}"/>
+
+            <Action ID="ValidateLowered" robot="{robot}" arm="{arm}" surface="{surface}" lowered_status="{lowered_status}"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Fold Arms" _inputs="robot" _outputs="robot">
+
+        <Sequence>
+
+            <Action ID="Fold Arm Left"/>
+
+            <Action ID="Fold Arm Right"/>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Safety Check Lidar">
+
+        <Sequence>
+
+            <Sequence name="Setup Parameters">
+
+                <Script code="safe_threshold_left:={L};safe_threshold_front:={F};safe_threshold_right:={R}"/>
+
+            </Sequence>
+
+            <Sequence>
+
+                <Sequence>
+
+                    <Action ID="UpdateLidarData"/>
+
+                    <Action ID="ObstacleSafe" direction="front" threshold="{safe_threshold_front}"/>
+
+                    <Action ID="ObstacleSafe" direction="left" threshold="{safe_threshold_left}"/>
+
+                    <Action ID="ObstacleSafe" direction="right" threshold="{safe_threshold_right}"/>
+
+                </Sequence>
+
+            </Sequence>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Safety Check Camera">
+
+        <Sequence>
+
+            <Sequence name="Setup Parameters">
+
+                <Script code="safe_threshold:={V}"/>
+
+            </Sequence>
+
+            <Sequence>
+
+                <Sequence>
+
+                    <Action ID="TakePicture"/>
+
+                    <Action ID="Check Picture" safe_threshold="{safe_threshold}"/>
+
+                </Sequence>
+
+            </Sequence>
+
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Go Home">
+
+        <Action ID="Placeholder Go Home"/>
+
+    </BehaviorTree>
+
+
+    <BehaviorTree ID="Arrival Procedure" _inputs="robot;location" _outputs="robot;location">
+
+        <Action ID="Placeholder Arrival Procedure" robot="{robot}" location="{location}"/>
+    </BehaviorTree>
+
+    <BehaviorTree ID="Departure Procedure" _inputs="robot;location" _outputs="robot;location">
+
+        <Sequence>
+            <SubTree ID="Fold Arms" robot="{robot}"></SubTree>
+            <Action ID="Placeholder Arrival Procedure" robot="{robot}" location="{location}"/>
+        </Sequence>
+
+    </BehaviorTree>
+
+    <BehaviorTree ID="Prepare Perception" _inputs="robot" _outputs="robot">
+
+        <Action ID="Placeholder Prepare Perception" robot="{robot}"/>
+    </BehaviorTree>
+    <BehaviorTree ID="Explore Environment" _inputs="robot" _outputs="robot">
+
+        <Action ID="Placeholder Explore Environment" robot="{robot}"/>
+    </BehaviorTree>
+    <BehaviorTree ID="Validate Placement" _inputs="robot;arm;object;surface" _outputs="robot;arm;object;surface">
+
+        <Action ID="Placeholder Validate Placement" robot="{robot}" arm="{arm}" object="{object}" surface="{surface}"/>
+    </BehaviorTree>
+    <BehaviorTree ID="Pull Open" _inputs="robot;handle;surface;arm" _outputs="robot;handle;surface;arm">
+
+        <Action ID="Placeholder Pull Open" robot="{robot}" handle="{handle}" surface="{surface}" arm="{arm}"/>
+    </BehaviorTree>
+    <BehaviorTree ID="Push Close" _inputs="robot;handle;surface;arm" _outputs="robot;handle;surface;arm">
+
+        <Action ID="Placeholder Push Close" robot="{robot}" handle="{handle}" surface="{surface}" arm="{arm}"/>
+    </BehaviorTree>
+</root>
