@@ -1,6 +1,6 @@
 # WOSRA24 Knowledge-based Execution Configuration for Adaptive Behavior Trees
 
-## Resources
+
 
 <img src="images/flavor_example.png" alt="Narrow Flavors Example" width="50%">
 
